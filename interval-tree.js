@@ -334,7 +334,7 @@ tproto.queryPoint = function(p, cb) {
 }
 
 tproto.queryInterval = function(lo, hi, cb) {
-  if(lo <= hi && this.root) {
+  if(lo < hi && this.root) {
     return this.root.queryInterval(lo, hi, cb)
   }
 }
